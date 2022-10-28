@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import { formatProjectMetadata } from "./formatProjectMetadata";
-import { getProjectMetadata } from "./getProjectMetadata";
+import { getProjectMetadata, mutateField } from "./getProjectMetadata";
 
 async function main() {
   // const data = await fs.readFile(path.resolve("data/raw.json"), "utf-8");
@@ -28,4 +28,8 @@ async function main() {
   );
 }
 
-main();
+async function main2() {
+  await mutateField();
+}
+
+main2();
